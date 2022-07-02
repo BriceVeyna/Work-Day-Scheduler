@@ -16,6 +16,8 @@ Color assignment of the text fields was done using a for loop, iterating over th
 
 ![Color-Assignment](./assets/images/color-assignment.JPG)
 
+The save function was performed by using a click event on a button to trigger local storage of that associated text box. That information was then immediately retrieved from local storage and displayed so that it would persist on the page even once the page is reloaded.
+
 ![Save-Button](./assets/images/save-button.JPG)
 
 ## Technologies Used
