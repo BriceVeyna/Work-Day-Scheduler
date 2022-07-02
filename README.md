@@ -9,6 +9,12 @@ This projest is a program that creates a simple calendar application for work da
 
 ## Usage
 
+![Current-Day](./assets/images/current-day.JPG)
+
+![Color-Assignment](./assets/images/color-assignment.JPG)
+
+![Save-Button](./assets/images/save-button.JPG)
+
 ## Technologies Used
 - JavaScript
 - HTML
