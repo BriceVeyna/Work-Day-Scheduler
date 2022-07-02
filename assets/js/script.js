@@ -33,11 +33,52 @@ for (var i = 0; i < businessHours24.length; i++) {
     }
 }
 
-// Save button stores text in local storage
+// Save buttons linked to individual time fields, store and retrieve from local storage
 var saveBtnEl = $('.saveBtn');
 
+var nineAM = $('#09-AM');
+var tenAM = $('#10-AM');
+var elevenAM = $('#11-AM');
+var twelvePM = $('#12-PM');
+var onePM = $('#01-PM');
+var twoPM = $('#02-PM');
+var threePM = $('#03-PM');
+var fourPM = $('#04-PM');
+var fivePM = $('#05-PM');
+
 saveBtnEl.on('click', function() {
-    var textBlock = $('.description').val();
-    localStorage.setItem("text-block", textBlock);
-    console.log(textBlock);
+    localStorage.setItem("09AM", nineAM.val());
+    console.log(nineAM.val());
+});
+
+saveBtnEl.on('click', function() {
+    localStorage.setItem("10AM", tenAM.val());
+});
+
+saveBtnEl.on('click', function() {
+    localStorage.setItem("11AM", elevenAM.val());
+});
+
+saveBtnEl.on('click', function() {
+    localStorage.setItem("12PM", twelvePM.val());
+});
+
+saveBtnEl.on('click', function() {
+    localStorage.setItem("01PM", onePM.val());
+});
+
+saveBtnEl.on('click', function() {
+    localStorage.setItem("02PM", twoPM.val());
+});
+
+saveBtnEl.on('click', function() {
+    localStorage.setItem("03PM", threePM.val());
+});
+
+saveBtnEl.on('click', function() {
+    localStorage.setItem("04PM", fourPM.val());
+});
+
+saveBtnEl.on('click', function() {
+    localStorage.setItem("05PM", fivePM.val());
 });
