@@ -45,35 +45,44 @@ saveBtnEl.on('click', function() {
     localStorage.setItem("09AM", nineAM.val());
     console.log(nineAM.val());
 });
+nineAM.val(localStorage.getItem("09AM"));
 
 saveBtnEl.on('click', function() {
     localStorage.setItem("10AM", tenAM.val());
 });
+tenAM.val(localStorage.getItem("10AM"));
 
 saveBtnEl.on('click', function() {
     localStorage.setItem("11AM", elevenAM.val());
 });
+elevenAM.val(localStorage.getItem("11AM"));
 
 saveBtnEl.on('click', function() {
     localStorage.setItem("12PM", twelvePM.val());
 });
+twelvePM.val(localStorage.getItem("12PM"));
 
 saveBtnEl.on('click', function() {
     localStorage.setItem("01PM", onePM.val());
 });
+onePM.val(localStorage.getItem("01PM"));
 
 saveBtnEl.on('click', function() {
     localStorage.setItem("02PM", twoPM.val());
 });
+twoPM.val(localStorage.getItem("02PM"));
 
 saveBtnEl.on('click', function() {
     localStorage.setItem("03PM", threePM.val());
 });
+threePM.val(localStorage.getItem("03PM"));
 
 saveBtnEl.on('click', function() {
     localStorage.setItem("04PM", fourPM.val());
 });
+fourPM.val(localStorage.getItem("04PM"));
 
 saveBtnEl.on('click', function() {
     localStorage.setItem("05PM", fivePM.val());
 });
+fivePM.val(localStorage.getItem("05PM"));
