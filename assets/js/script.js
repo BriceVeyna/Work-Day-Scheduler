@@ -34,3 +34,10 @@ for (var i = 0; i < businessHours24.length; i++) {
 }
 
 // Save button stores text in local storage
+var saveBtnEl = $('.saveBtn');
+
+saveBtnEl.on('click', function() {
+    var textBlock = $('.description').val();
+    localStorage.setItem("text-block", textBlock);
+    console.log(textBlock);
+});
