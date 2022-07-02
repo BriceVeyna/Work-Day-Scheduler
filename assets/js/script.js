@@ -3,39 +3,10 @@ var today = moment();
 $('#currentDay').text(today.format("dddd, MMMM Do YYYY"));
 
 // Store current time to track for style class
-var currentTime = today.format("h");
+var currentTime = today.format("H");
 console.log(currentTime);
 
-// Store variable for standard business hours
-var businessHours24 = ["9", "10", "11", "12", "13", "14", "15", "16", "17"];
-
-for (var i = 0; i < businessHours24.length; i++) {
-
-    var timeBlockEl = $('.description');
-    var businessHours = moment(businessHours24, "k").format("h");
-
-    // Conditional statement, attaches style class to row depending on current time
-    if (currentTime < businessHours[i]) {
-        console.log(businessHours[i]);
-        timeBlockEl.removeClass("past");
-        timeBlockEl.removeClass("present");
-        timeBlockEl.addClass("future");
-    } else if (currentTime > businessHours[i]) {
-        console.log(businessHours[i]);
-        timeBlockEl.addClass("past");
-        timeBlockEl.removeClass("present");
-        timeBlockEl.removeClass("future");
-    } else {
-        console.log(businessHours[i]);
-        timeBlockEl.removeClass("past");
-        timeBlockEl.addClass("present");
-        timeBlockEl.removeClass("present");
-    }
-}
-
-// Save buttons linked to individual time fields, store and retrieve from local storage
-var saveBtnEl = $('.saveBtn');
-
+// Store time block variables for each row
 var nineAM = $('#09-AM');
 var tenAM = $('#10-AM');
 var elevenAM = $('#11-AM');
@@ -45,6 +16,30 @@ var twoPM = $('#02-PM');
 var threePM = $('#03-PM');
 var fourPM = $('#04-PM');
 var fivePM = $('#05-PM');
+
+// Store time block array to use in iterated loop
+var timeBlockEl = [nineAM, tenAM, elevenAM, twelvePM, onePM, twoPM, threePM, fourPM, fivePM];
+
+// Store variable for standard business hours
+var businessHours = ["09", "10", "11", "12", "13", "14", "15", "16", "17"];
+
+// Iterates over business hours, attaches class of 'past', 'present', or 'future' to each to dictate what color to give it based on the current time.
+for (var i = 0; i < businessHours.length; i++) {
+    // Conditional statement, attaches style class to row depending on current time
+    if (currentTime < businessHours[i]) {
+        console.log(businessHours[i]);
+        timeBlockEl[i].addClass("future");
+    } else if (currentTime > businessHours[i]) {
+        console.log(businessHours[i]);
+        timeBlockEl[i].addClass("past");
+    } else {
+        console.log(businessHours[i]);
+        timeBlockEl[i].addClass("present");
+    }
+}
+
+// Save buttons linked to individual time fields, store and retrieve from local storage
+var saveBtnEl = $('.saveBtn');
 
 saveBtnEl.on('click', function() {
     localStorage.setItem("09AM", nineAM.val());
