@@ -8,8 +8,11 @@ This projest is a program that creates a simple calendar application for work da
 [Work-Day-Scheduler](https://briceveyna.github.io/Work-Day-Scheduler/)
 
 ## Usage
+The current day display shown below was created using moment.js to retrieve the date and format it. It was then displayed using jQuery format to pull the correct Id and write to it.
 
 ![Current-Day](./assets/images/current-day.JPG)
+
+Color assignment of the text fields was done using a for loop, iterating over the length of an array created for the listed business hours. A conditional statement was then executed with respect to the relationship between the current time, defined using moment.js, and the array of business hours at the index value. For each case, a class was assigned with an associated color value.
 
 ![Color-Assignment](./assets/images/color-assignment.JPG)
 
