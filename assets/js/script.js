@@ -27,13 +27,10 @@ var businessHours = ["09", "10", "11", "12", "13", "14", "15", "16", "17"];
 for (var i = 0; i < businessHours.length; i++) {
     // Conditional statement, attaches style class to row depending on current time
     if (currentTime < businessHours[i]) {
-        console.log(businessHours[i]);
         timeBlockEl[i].addClass("future");
     } else if (currentTime > businessHours[i]) {
-        console.log(businessHours[i]);
         timeBlockEl[i].addClass("past");
     } else {
-        console.log(businessHours[i]);
         timeBlockEl[i].addClass("present");
     }
 }
