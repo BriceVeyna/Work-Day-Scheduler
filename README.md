@@ -36,7 +36,7 @@ If you have any additional questions, feel free to reach out.
 - Email: briceveyna@gmail.com
 
 ## License
-Brice Veyna's Family Memories is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+Brice Veyna's Work Day Scheduler is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
 Copyright 2022 Brice Veyna
 
